@@ -1,0 +1,139 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Summary of details
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/index",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+<hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+
+      <h1>
+        Check your answers
+      </h1>
+
+      <dl class="nhsuk-summary-list">
+        
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            NHS Number
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['nhs-number'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/nhs-number">
+              Change<span class="nhsuk-u-visually-hidden"> nhs number</span>
+            </a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Name
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['first-name'] }} {{ data['last-name'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/name">
+              Change<span class="nhsuk-u-visually-hidden"> name</span>
+            </a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            GP surgery
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['surgery'] }}
+          </dd>
+          <dd clas="nhsuk-summary-list__actions">
+            <a href="/surgery">
+              Change<span class="nhsuk-u-visually-hidden"> gp surgery</span>
+            </a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Address
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['address-line-1'] }} {{ data['address-line-2']}}<br>
+            {{ data['town'] }}<br>
+            {{ data['county'] }}<br>
+            {{ data['postcode'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/address">
+              Change<span class="nhsuk-u-visually-hidden"> address</span>
+            </a>
+          </dd>
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Contact Info
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['phone-number'] }}<br>
+            {{ data['email-address'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/contact">
+              Change<span class="nhsuk-u-visually-hidden"> contact info</span>
+            </a>
+          </dd>        
+        </div>
+        <div class="nhsuk-summary-list__row">
+          <dt class="nhsuk-summary-list__key">
+            Notes/Symptoms
+          </dt>
+          <dd class="nhsuk-summary-list__value">
+            {{ data['notes'] }}
+          </dd>
+          <dd class="nhsuk-summary-list__actions">
+            <a href="/notes">
+              Change<span class="nhsuk-u-visually-hidden"> notes</span>
+            </a>
+          </dd>        
+        </div>
+        
+      </dl>
+      <button class="nhsuk-button">Continue</button>
+      <a href="/clear-data" class="nhsuk-button nhsuk-button--reverse nhsuk-u-margin-bottom-8" type="submit">
+        Clear data
+      </a>
+    </div>
+  </div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/docs",
+        "label": "Home"
+      },
+      {
+        "URL": "/clear-data",
+        "label": "Clear data"
+      },
+      {
+        "URL": "/docs/about",
+        "label": "About and support"
+      },
+      {
+        "URL": "https://github.com/nhsuk/nhsuk-prototype-kit",
+        "label": "NHS.UK prototype kit - GitHub"
+      }
+    ]
+  })}}
+{% endblock %}

@@ -1,0 +1,80 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Enter NHS number
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/index",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-two-thirds">
+  <form action="/name" method="post">
+    <div class="nhsuk-form-group">
+        <h1 class="nhsuk-fieldset__heading">
+          <label class="nhsuk-label nhsuk-label--l" for="nhs-number">
+            Enter your NHS number
+          </label>
+        </h1>
+      <details class="nhsuk-details">
+        <summary class="nhsuk-details__summary">
+          <span class="nhsuk-details__summary-text">
+            How to find your NHS number
+          </span>
+        </summary>
+        <div class="nhsuk-details__text">
+          <p>An NHS number is a 10 digit number, like 485 777 3456.</p>
+          <p>You can find your NHS number by logging in to a GP online service or on any document the NHS has sent you, such as your:</p>
+          <ul>
+            <li>prescriptions</li>
+            <li>test results</li>
+            <li>hospital referral letters</li>
+            <li>appointment letters</li>
+          </ul>
+          <p>Ask your GP surgery for help if you can't find your NHS number.</p>
+        </div>
+      </details>
+      <input class="nhsuk-input nhsuk-input--width-10" id="nhs-number" name="nhs-number" type="text" value="{{ data['nhs-number'] }}">
+    </div>
+    <button class="nhsuk-button" type="submit">Continue</button>
+    </form>
+    <div class="nhsuk-back-link">
+        <a class="nhsuk-back-link__link" href="/index" id="#back-nhs-number">
+          <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+          </svg>
+          Go back
+        </a>
+    </div>
+  </div>
+</div>
+{% endblock %}
+
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/docs",
+        "label": "Home"
+      },
+      {
+        "URL": "/clear-data",
+        "label": "Clear data"
+      },
+      {
+        "URL": "/docs/about",
+        "label": "About and support"
+      },
+      {
+        "URL": "https://github.com/nhsuk/nhsuk-prototype-kit",
+        "label": "NHS.UK prototype kit - GitHub"
+      }
+    ]
+  })}}
+{% endblock %}

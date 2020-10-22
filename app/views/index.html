@@ -1,0 +1,112 @@
+{% extends 'layout.html' %}
+
+{% block pageTitle %}
+  Book GP appointment
+{% endblock %}
+
+{% block beforeContent %}
+{{ breadcrumb({
+  href: "/index",
+  text: "Home"
+}) }}
+{% endblock %}
+
+{% block content %}
+{% from 'care-card/macro.njk' import careCard %}
+
+{{ careCard({
+  "type": "non-urgent",
+  "heading": "Book a GP appointment online if:",
+  "HTML": "
+  <ul>
+    <li>you are not in serious pain/ache or the pain is more uncomfortable than painful</li>
+    <li>the pain has stayed the same for some time</li>
+    <li>you can safely get to and from the practice</li>
+  </ul>
+  <p>Tell the receptionist the reference number given to you at the end of the online request</p>
+  "
+}) }}
+<hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+{% from 'care-card/macro.njk' import careCard %}
+
+{{ careCard({
+  "type": "urgent",
+  "heading": "Ring the GP surgery as soon as possible if:",
+  "HTML": "
+  <ul>
+    <li>a substantial amount of pain has just appeared</li>
+    <li>you are pregnant and you have pain/aches in any of your vital organs (lungs, stomach, heart etc.) </li>
+    <li>you need to re-arrange an appointment</li>
+    <li>you cannot safely get to and from the surgery (travel arrangements can be made over the phone)</li>
+  </ul>
+   <p>In these situations, ring the GP as you will get through to a receptionist .</p>
+  "
+}) }}
+<hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+{% from 'care-card/macro.njk' import careCard %}
+
+{{ careCard({
+  "type": "immediate",
+  "heading": "Call 999 immediately if you or someone you are caring for is:",
+  "HTML": "
+  <ul>
+    <li>having shooting pains in arms, chest or head</li>
+    <li>suffering of a tight chest and/or is struggling to breathe</li>
+    <li>there is large amounts of blood</li>
+    <li>unconscious or unresponsive</li>
+  </ul>
+  <p>Call 999 immediately as there is a need for immediate treatment in a hospital.</p>
+  "
+}) }}
+<hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
+
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+
+      <h1>
+        Book a GP appointment online
+      </h1>
+      <div class="nhsuk-inset-text">
+        <span class="nhsuk-u-visually-hidden">Book an online appointment </span>
+        <p>
+          Use this service to:
+        </p>
+
+        <ul>
+          <li>
+            Book a GP appointment
+          </li>
+        </ul>
+      </div>
+      <a href="/nhs-number" class="nhsuk-button nhsuk-u-margin-bottom-8">
+        Book now
+      </a>
+
+    </div>
+
+  </div>
+{% endblock %}
+{% block footer %}
+  {{ footer({
+    "links": [
+      {
+        "URL": "/index",
+        "label": "Home"
+      },
+      {
+        "URL": "/clear-data",
+        "label": "Clear data"
+      },
+      {
+        "URL": "/docs/about",
+        "label": "About and support"
+      },
+      {
+        "URL": "https://github.com/nhsuk/nhsuk-prototype-kit",
+        "label": "NHS.UK prototype kit - GitHub"
+      }
+    ]
+  })}}
+{% endblock %}
