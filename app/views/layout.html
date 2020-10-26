@@ -22,14 +22,28 @@
 {% block header %}
   {{ header({
     "service": {
-        "name": "GP appointment",
-        "href": "/index"
+        "name": "Get healthcare cover for travelling abroad",
+        "href": ""
       },
       "showNav": "false",
       "showSearch": "false"
     })
   }}
 {% endblock %}
+
+{% from 'header/macro.njk' import header %}
+
+{{ header({
+  "service": {
+    "name": "Get healthcare cover for travelling abroad",
+    "longName": "true"
+  },
+  "ariaLabel": "Get healthcare cover for travelling abroad check answers page",
+  "showNav": "false",
+  "showSearch": "false"
+  })
+}}
+<hr class="nhsuk-section-break nhsuk-section-break--m nhsuk-section-break--visible">
 
 <!-- Footer goes inside the footer block -->
 <!-- More info and code for the footer can be found at https://service-manual.nhs.uk/design-system/components/footer -->
