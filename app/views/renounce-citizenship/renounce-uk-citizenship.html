@@ -1,0 +1,66 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Example - Branching
+{% endblock %}
+
+{% block beforeContent %}
+  {{ breadcrumb({
+    items: [
+      {
+        href: "/index",
+        text: "Home"
+      }
+    ],
+    href: "/docs/how-tos",
+    text: "How to guides"
+  }) }}
+{% endblock %}
+
+{% block content %}
+
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+
+    <form action="branching-handler" method="post">
+
+      {% call fieldset({
+        legend: {
+          text: "Have you renounced your UK citizenship?",
+          classes: "nhsuk-fieldset__legend--l",
+          isPageHeading: true
+        }
+      }) %}
+
+      {{ radios({
+        "idPrefix": "renounce-uk-citizenship",
+        "name": "renounce-uk-citizenship",
+        "items": [
+          {
+            "value": "Yes",
+            "text": "Yes"
+          },
+          {
+            "value": "No",
+            "text": "No"
+          }
+        ]
+      }) }}
+
+      {% endcall %}
+
+      {{ button({
+        "text": "Continue"
+      }) }}
+
+    </form>
+
+    {{ backLink({
+      "href": "#",
+      "text": "back to the previous page"
+    }) }}
+
+  </div>
+</div>
+
+{% endblock %}
