@@ -1,0 +1,116 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      <h1 class="nhsuk-heading-xl">
+        Check your answers
+      </h1>
+
+      <h2 class="nhsuk-heading-l">
+        Your parent's details
+      </h2>
+      <form action="/" method="POST" id="check-answers">
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              (parent's name)
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-name">
+                Change<span class="nhsuk-u-visually-hidden"> name</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Home address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              (parent's address)
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-address">
+                Change<span class="nhsuk-u-visually-hidden"> address</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Date of birth
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              (parent's date of birth)
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-date-of-birth">
+                Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Nationality
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              (parent's nationality)
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-nationality">
+                Change<span class="nhsuk-u-visually-hidden"> nationality</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              EUSS
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              (yes/no)
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-euss">
+                Change<span class="nhsuk-u-visually-hidden"> euss</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+        </dl>
+        <button class="nhsuk-button" id="submits-answers">
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

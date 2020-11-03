@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <form action="/" method="POST" id="partner-live">
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Where does <span id="spouse/civil-partner">(spouse/civil partner's name)</span> live?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-radios">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="partner-live-uk" name="partner-live" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="partner-live-uk">
+                UK
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="partner-live-eu" name="partner-live" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="partner-live-eu">
+                EU
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+    <button class="nhsuk-button" type="submit" id="continueButton">Continue</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

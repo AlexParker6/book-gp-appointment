@@ -1,0 +1,76 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-width-container">
+  <div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+      
+      <h1 class="nhsuk-heading-xl">
+        Check your answers
+      </h1>
+      <form action="/" method="POST" id="check-answers">
+        <dl class="nhsuk-summary-list">
+
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Name
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              Mark Francis
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-name">
+                Change<span class="nhsuk-u-visually-hidden"> address</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Home address
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              73 Roman Rd<br>Leeds<br>LS2 5ZN
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-address">
+                Change<span class="nhsuk-u-visually-hidden"> full name</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+        
+          <div class="nhsuk-summary-list__row">
+            <dt class="nhsuk-summary-list__key">
+              Date of Birth
+            </dt>
+            <dd class="nhsuk-summary-list__value">
+              27 November 1984
+            </dd>
+        
+            <dd class="nhsuk-summary-list__actions">
+        
+              <a href="#" id="change-date-of-birth">
+                Change<span class="nhsuk-u-visually-hidden"> date of birth</span>
+              </a>
+        
+            </dd>
+        
+          </div>
+                
+        </dl>
+        <button class="nhsuk-button" id="submits-answers">
+          Continue
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}

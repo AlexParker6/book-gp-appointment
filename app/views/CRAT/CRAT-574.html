@@ -1,0 +1,39 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <form action="/" method="POST" id="add-another-grandparent">
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              Do you want to add another grandparent to your application?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-radios">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="add-another-grandparent-yes" name="-anotheradd-grandparent" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="add-another-grandparent-yes">
+                Yes
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="add-another-grandparent-no" name="add-another-grandparent" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="add-another-grandparent-no">
+                No
+              </label>
+            </div>
+
+          </div>
+        </fieldset>
+      </div>
+    <button class="nhsuk-button" type="submit" id="continueButton">Continue</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,44 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+      <form action="/" method="POST" id="know-nhs-number">
+        <div class="nhsuk-form-group">
+  
+          <fieldset class="nhsuk-fieldset">
+            <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+              <h1 class="nhsuk-fieldset__heading">
+                Do you know your NHS number?
+              </h1>
+              <div class="nhsuk-hint" id="nhs-number-hint">
+                Your NHS number is a 10 digit number. For example, 485 777 3456.<br><br>
+
+                You can find it on any letter the NHS has sent you, on a prescription, or by logging in to a GP practice online service.
+              </div>
+            </legend>
+  
+            <div class="nhsuk-radios">
+  
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="know-nhs-number-yes" name="know-nhs-number" type="radio" value="yes">
+                <label class="nhsuk-label nhsuk-radios__label" for="know-nhs-number-yes">
+                  Yes
+                </label>
+              </div>
+  
+              <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="know-nhs-number-no" name="know-nhs-number" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="know-nhs-number-no">
+                  No
+                </label>
+              </div>
+  
+            </div>
+          </fieldset>
+        </div>
+      <button class="nhsuk-button" type="submit" id="continueButton">Continue</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

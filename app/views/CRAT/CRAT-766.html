@@ -1,0 +1,52 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+        <form action="/" method="POST" id="enter-partner-date-of-birth">
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                        <h1 class="nhsuk-fieldset__heading">
+                            What is (durable partner's name) date of birth?
+                        </h1>
+                    </legend>
+                    <div class="nhsuk-hint" id="hint">
+                        For example, 15 3 1984
+                    </div>
+                
+                    <div class="nhsuk-date-input" id="partner-date-of-birth">
+                        <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="partner-day">
+                            Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="partner-day" name="partner-day" type="number" pattern="[0-9]*">
+                        </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="partner-month">
+                            Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="partner-month" name="partner-month" type="number" pattern="[0-9]*">
+                        </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="partner-year">
+                            Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="partner-year" name="partner-year" type="number" pattern="[0-9]*">
+                        </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="nhsuk-button" id="continueButton" type="submit">
+                Continue
+            </button>
+        </form>
+    </div>
+</div>
+{% endblock %}

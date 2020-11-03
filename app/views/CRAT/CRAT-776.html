@@ -1,0 +1,46 @@
+{% extends 'layout.html'%}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+  <div class="nhsuk-grid-column-three-quarters">
+    <form action="/" method="POST" id="parent-nationality">
+      <div class="nhsuk-form-group">
+
+        <fieldset class="nhsuk-fieldset">
+          <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+            <h1 class="nhsuk-fieldset__heading">
+              What is <span id="parent-name">(parent's name)</span> nationality?
+            </h1>
+          </legend>
+
+          <div class="nhsuk-radios">
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="parent-nationality-uk" name="parent-nationality" type="radio" value="yes">
+              <label class="nhsuk-label nhsuk-radios__label" for="parent-nationality-uk">
+                UK
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+              <input class="nhsuk-radios__input" id="parent-nationality-eu" name="parent-nationality" type="radio" value="no">
+              <label class="nhsuk-label nhsuk-radios__label" for="parent-nationality-eu">
+                EU, Switzerland, Norway, Iceland and Liechtenstein
+              </label>
+            </div>
+
+            <div class="nhsuk-radios__item">
+                <input class="nhsuk-radios__input" id="parent-nationality-other" name="parent-nationality" type="radio" value="no">
+                <label class="nhsuk-label nhsuk-radios__label" for="parent-nationality-other">
+                  Other
+                </label>
+              </div>
+
+          </div>
+        </fieldset>
+      </div>
+    <button class="nhsuk-button" type="submit" id="continueButton">Continue</button>
+    </form>
+  </div>
+</div>
+{% endblock %}

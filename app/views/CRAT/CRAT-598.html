@@ -1,0 +1,59 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+        <form action="/" method="POST" id="student-start-date">
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset" aria-describedby="hint" role="group">
+                    <legend class="nhsuk-fieldset__legend nhsuk-label--l">
+                        <h1 class="nhsuk-fieldset__heading">
+                            What date did you arrive in  <span id="country">(country)</span>?
+                        </h1>
+                    </legend>
+                    <div class="nhsuk-hint" id="hint">
+                        For example, 15 3 1984
+                    </div>
+                
+                    <div class="nhsuk-date-input" id="student-start">
+                        <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="student-start-day">
+                            Day
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="student-start-day" name="student-start-day" type="number" pattern="[0-9]*">
+                        </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="student-start-month">
+                            Month
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-2" id="student-start-month" name="student-start-month" type="number" pattern="[0-9]*">
+                        </div>
+                        </div>
+                        <div class="nhsuk-date-input__item">
+                        <div class="nhsuk-form-group">
+                            <label class="nhsuk-label nhsuk-date-input__label" for="student-start-year">
+                            Year
+                            </label>
+                            <input class="nhsuk-input nhsuk-date-input__input nhsuk-input--width-4" id="student-start-year" name="student-start-year" type="number" pattern="[0-9]*">
+                        </div>
+                        </div>
+                    </div>
+                </fieldset>
+            </div>
+            <button class="nhsuk-button" id="continueButton" type="submit">
+                Continue
+            </button>
+        </form>
+        <div class="nhsuk-back-link">
+            <a class="nhsuk-back-link__link" href="#" id="backButton">
+              <svg class="nhsuk-icon nhsuk-icon__chevron-left" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M8.5 12c0-.3.1-.5.3-.7l5-5c.4-.4 1-.4 1.4 0s.4 1 0 1.4L10.9 12l4.3 4.3c.4.4.4 1 0 1.4s-1 .4-1.4 0l-5-5c-.2-.2-.3-.4-.3-.7z"></path>
+              </svg>
+              Change my previous answer</a>
+          </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-three-quarters">
+        <form action="/" method="POST" id="partner-address">
+            <div class="nhsuk-form-group">
+                <fieldset class="nhsuk-fieldset">
+                    <legend class="nhsuk-fieldset__legend nhsuk-fieldset__legend--l">
+                      <h1 class="nhsuk-fieldset__heading">
+                        What is your durable partner's home address?
+                      </h1>
+                    </legend>
+
+                    <div class="nhsuk-form-group">
+                        <label class="nhsuk-label" for="partner-address">
+                          Enter postcode
+                        </label>
+                        <input class="nhsuk-input" id="partner-postcode" name="postcode" type="postcode">
+                    </div>
+                </fieldset>
+            </div>
+            <button class="nhsuk-button nhsuk-button--secondary" id="find-address" type="submit">
+                Find address
+            </button>
+        </form>
+    </div>
+</div>
+
+{% endblock %}

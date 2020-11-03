@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+<div class="nhsuk-grid-row">
+    <div class="nhsuk-grid-column-two-thirds">
+        <form action="/" method="POST" id="partner-email">
+            <div class="nhsuk-form-group">
+                <h1 class="nhsuk-label-wrapper">
+                <label class="nhsuk-label nhsuk-label--l" for="partner-email">
+                What is <span id="partner-name">(partner's name)</span> email address?
+                </label>
+                </h1>
+                <input class="nhsuk-input" id="partner-email" name="partner-email" type="email">
+            </div>
+            <button class="nhsuk-button" type="submit" id="continueButton">Continue</button>
+        </form>
+    </div>
+</div>
+{% endblock %}
